@@ -7,11 +7,10 @@ class Home extends React.Component{
         this.state = {
             books: []
         }
-        this.getBook = this.getBook.bind(this);
     }
 
     componentDidMount(){
-        axios.get("http://localhost:8000/getBooks/")
+        axios.get("http://65.2.4.156/getBooks/")
         .then((res) => {
             res.data['books'].map(
                 book => {
@@ -32,17 +31,6 @@ class Home extends React.Component{
         )
     }
 
-    getBook(book){
-        console.log(book)
-        axios.get(`http://localhost:8000/getBook/${book}`)
-        .then((data) => {
-            console.log(data)
-        })
-        .catch(
-            (err) => alert(err)
-        )
-    }
-
     render(){
         return(
             <>
@@ -52,7 +40,7 @@ class Home extends React.Component{
                         this.state.books ? 
                         this.state.books.map( book => 
                             <li>
-                                <a href = {`http://localhost:8000/getBook/${book.name}`} target = '_blank'>
+                                <a href = {`http://65.2.4.156/getBook/${book.name}`} target = '_blank'>
                                     {book.name}
                                 </a>
                             </li>
