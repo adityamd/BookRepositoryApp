@@ -1,0 +1,13 @@
+.button-class{
+    justify-content: center;
+    align-items: center;
+    padding: 10px; 
+    background-color: #E7D6AC;
+    border-radius: 20px;
+    border:0px;
+    cursor: pointer;
+}
+
+.button-class:hover{
+    background-color: #b6a45d;
+}

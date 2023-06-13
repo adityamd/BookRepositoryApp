@@ -1,0 +1,16 @@
+.navbar{
+    background-color: white;
+    color: #550D0E;
+    display: flex;
+    justify-content:space-between;
+    padding: 10px;
+}
+
+.navbar-group{
+    color: #550D0E;
+    display: flex;
+    gap: 24px;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Source Serif Pro';
+}

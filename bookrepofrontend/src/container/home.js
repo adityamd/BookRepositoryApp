@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 
+import Navbar from './navbar';
+import SecondaryNavbar from './secondaryNavbar';
+import ThirdNavbar from './thirdNavBar';
+
 class Home extends React.Component{
     constructor(props){
         super(props);
@@ -34,20 +38,10 @@ class Home extends React.Component{
     render(){
         return(
             <>
-                <h1>Bookstore</h1>
-                <ul>
-                    {
-                        this.state.books ? 
-                        this.state.books.map( book => 
-                            <li>
-                                <a href = {`http://65.2.4.156/getBook/${book.name}`} target = '_blank'>
-                                    {book.name}
-                                </a>
-                            </li>
-                        )
-                        : null
-                    }             
-                </ul>
+                <Navbar />
+                <SecondaryNavbar />
+                <ThirdNavbar currency="$USD" price="0.0" count="0" />
+                
             </>
         )
     }
